@@ -2,8 +2,7 @@
   "name": "ghost",
   "version": "1.22.2",
   "description": "The professional publishing platform",
-  "author": "Ghost Foundation",
-  "homepage": "http://ghost.org",
+  "author": "kuilsriverdentist",
   "keywords": [
     "ghost",
     "blog",
@@ -11,15 +10,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/TryGhost/Ghost.git"
+    "url": "git@github.com:levarne/client_dentist.git"
   },
-  "bugs": "https://github.com/TryGhost/Ghost/issues",
-  "contributors": "https://github.com/TryGhost/Ghost/graphs/contributors",
   "license": "MIT",
   "main": "./core/index",
   "scripts": {
     "start": "node index",
     "dev": "DEBUG=ghost:* grunt dev",
+    "dev-live": "nodemon current/index.js --watch --ext hbs,js,css",
     "test": "grunt validate --verbose",
     "setup": "yarn install && knex-migrator init && grunt symlink && grunt init || true",
     "lint": "grunt lint"
